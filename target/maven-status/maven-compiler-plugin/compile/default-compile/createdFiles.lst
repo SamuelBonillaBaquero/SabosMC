@@ -1,0 +1,6 @@
+com\sabosmc\managers\SceneManager.class
+com\sabosmc\Main.class
+com\sabosmc\Controllers\LanguageController.class
+com\sabosmc\Views\ChooseLanguaje.class
+com\sabosmc\services\i18n.class
+com\sabosmc\Views\ChooseVersion.class

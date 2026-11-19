@@ -1,0 +1,97 @@
+/* ===== Base ===== */
+.root {
+    -fx-background-color: #0d1117;
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 13px;
+    -fx-text-fill: #c9d1d9;
+}
+
+.label {
+    -fx-text-fill: #c9d1d9;
+}
+
+/* ===== Cabecera ===== */
+.title {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3fb950;
+    -fx-effect: dropshadow(gaussian, rgba(63, 185, 80, 0.45), 18, 0.2, 0, 0);
+}
+
+.subtitle {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #8b949e;
+}
+
+.section-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e6edf3;
+}
+
+/* ===== Radio buttons ===== */
+.radio-button {
+    -fx-text-fill: #c9d1d9;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.radio-button .radio {
+    -fx-background-color: #161b22;
+    -fx-background-radius: 1em;
+    -fx-border-color: #30363d;
+    -fx-border-radius: 1em;
+    -fx-border-width: 1.5;
+    -fx-background-insets: 0;
+}
+
+.radio-button .radio .dot {
+    -fx-background-color: transparent;
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: #3fb950;
+}
+
+.radio-button:selected .radio {
+    -fx-border-color: #3fb950;
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: #3fb950;
+}
+
+.radio-button:selected {
+    -fx-text-fill: #3fb950;
+}
+
+.radio-button:focused .radio {
+    -fx-border-color: #3fb950;
+    -fx-effect: dropshadow(gaussian, rgba(63, 185, 80, 0.5), 8, 0.3, 0, 0);
+}
+
+/* ===== Botón principal ===== */
+.primary-button {
+    -fx-background-color: #238636;
+    -fx-background-radius: 6;
+    -fx-border-color: rgba(240, 246, 252, 0.1);
+    -fx-border-radius: 6;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2ea043;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #1a7f37;
+}
+
+.primary-button:focused {
+    -fx-effect: dropshadow(gaussian, rgba(63, 185, 80, 0.5), 10, 0.3, 0, 0);
+}
