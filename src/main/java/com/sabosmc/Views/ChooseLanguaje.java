@@ -19,6 +19,7 @@ public class ChooseLanguaje {
 
     public Scene Scene1() {
 
+
         // ---------- ARRIBA: título (sin banner) ----------
         title.setText("SabosMC");
         title.getStyleClass().add("title");
@@ -43,6 +44,14 @@ public class ChooseLanguaje {
         en.setToggleGroup(grupe);
         en.setSelected(true);
 
+
+        grupe.selectedToggleProperty().addListener((obs,oldValue, newValue) -> {
+            if(newValue != null){
+                //variable that will be passed to the controller to detect the language
+                RadioButton choose = (RadioButton) newValue;
+            }
+        });;
+        
         VBox centro = new VBox(15, text, es, en);
         centro.setAlignment(Pos.TOP_LEFT);
         centro.setPadding(new Insets(30, 0, 0, 150));
@@ -51,7 +60,14 @@ public class ChooseLanguaje {
         continuee.setText("Continue");
         continuee.setPrefSize(185, 45);
         continuee.getStyleClass().add("primary-button");
-        continuee.setOnAction(e ->LanguageController.Continuar());
+        
+        continuee.setOnAction(e -> {
+            RadioButton selected = (RadioButton) grupe.getSelectedToggle();
+
+            LanguageController.Continuar(selected);
+            
+
+        });
 
         HBox abajo = new HBox(continuee);
         abajo.setAlignment(Pos.CENTER);
